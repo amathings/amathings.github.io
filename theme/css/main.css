@@ -477,7 +477,7 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 	#add-comment * {margin-bottom: .5em;}
 
 /** Greyscale filter stuff **/
-.bw {   
+/*.bw {   
 	filter: grayscale(1);
 	-webkit-filter: grayscale(1);
 	width: 200px;
@@ -503,4 +503,37 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 	width: 200px;
 	padding: 11px;
 }
+*/
 
+/* MY ADDITIONS*/
+
+/* Opacity Filter */
+.opacityOff{
+	width: 200px;
+	padding: 11px;
+	filter: opacity(100%);
+	transition-property: filter;
+	transition-duration: 1s;
+}
+
+.opacityOn{
+	width: 200px;
+	padding: 11px;
+	filter: opacity(50%);
+	transition-property: filter;
+	transition-duration: 1s;
+}
+
+img.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+figcaption {
+	font-style: italic;
+}
+
+figcaption.center {
+	text-align: center;
+}
