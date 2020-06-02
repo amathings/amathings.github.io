@@ -72,12 +72,20 @@ function opacityOn(img){
 	<div style="clear:both"></div>
 
     </header>
-      <figure>
+      <p>Worley noise is a noise function introduced by Steven Worley in 1996. In computer graphics it is used to create procedural textures, i.e. textures that are created automatically with arbitrary precision and do not have to be drawn by hand. Worley noise comes close to simulating textures of stone, water, or biological cells. </p>
+<h2>Basic algorithm</h2>
+<p>The basic idea is to take random points in space (2- or 3-dimensional) and then for every location in space take the distances dn to the nth-closest point (e.g. the second-closest point) and use combinations of those to control color information ( note that dn+1 &gt; dn). More precisely:</p>
+<ol>
+<li>Randomly distribute feature points in space organised as grid cells. In practice this is done on the fly without storage (as a procedural noise). The original method considered a variable number of seed points per cell so as to mimic a Poisson distribution, but many implementations just put one.</li>
+<li>At run time, extract the distances dn from the given location to the nth-closest seed point. This can be done efficiently by visiting the current cell plus its neighbors.</li>
+<li>Noise W(x) is formally the vector of distances, plus possibly the corresponding seed ids, user-combined so as to produce a color.</li>
+</ol>
+<figure>
     <img src = '/images/Example.jpg' class = 'center'/>
     <figcaption class = 'center'>Figure 1. Worley noise with 20 random points.</figcaption>
 </figure>
 
-<p>The code <a href="https://github.com/damuopel/WorleyNoise">here</a>:</p>
+<p>The code to obtain the above image is found <a href="https://github.com/damuopel/WorleyNoise">here</a> and is copied below:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
