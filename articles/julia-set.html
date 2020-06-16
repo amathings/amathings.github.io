@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>A-Math-ings - David</title>
+        <title>Julia Set</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -40,36 +40,47 @@ function opacityOn(img){
                     <li><a href="/pages/suggestions.html">Suggestions</a></li>
                 </ul></nav> -->
         </header><!-- /#banner -->
+<section id="pagecontent" class="body">
+	<script>
+	Mousetrap.bind('left', prev);
+	Mousetrap.bind('right', next);
 
-    <aside id="featured" class="body">
 
-
-	<div style="float:left">
-		<!-- <a href="/articles/julia-set.html">
-		<img src="images/JuliaSet.png" class="bw" id="ima1" onmouseover="greyoff(this.id)" onmouseleave="greyon(this.id)" border="0" /></a> -->
-        <a href="/articles/julia-set.html">
-        <img src="images/JuliaSet.png" class="opacityOn" id="ima1" onmouseover="opacityOff(this.id)" onmouseleave="opacityOn(this.id)" border="0" /></a>
+	function prev(element)
+	{
+		document.getElementById('prev').click();
+	}
+	function next(element)
+	{
+		document.getElementById('next').click();
+	}
+	</script>
+  <article>
+    <header>
+	<div>
+		<div style="float:left">
+		      <h1 class="entry-title">
+		        <a href="/articles/julia-set.html" rel="bookmark"
+		           title="Permalink to Julia Set">Julia Set</a>
+		      </h1>
+		</div>
+		<div style="float:right"><h2>        <abbr class="published" title="2020-06-16T00:00:00+00:00">
+                ma. 16 junio 2020
+        </abbr>
+</h2></div>
 	</div>
 
-	<div style="float:left">
-		<!-- <a href="/articles/lorenz-attractor.html">
-		<img src="images/Lorenz.gif" class="bw" id="ima2" onmouseover="greyoff(this.id)" onmouseleave="greyon(this.id)" border="0" /></a> -->
-        <a href="/articles/lorenz-attractor.html">
-        <img src="images/Lorenz.gif" class="opacityOn" id="ima2" onmouseover="opacityOff(this.id)" onmouseleave="opacityOn(this.id)" border="0" /></a>
-	</div>
+	<div style="clear:both"></div>
 
-	<div style="float:left">
-		<!-- <a href="/articles/worley-noise.html">
-		<img src="images/Example.jpg" class="bw" id="ima3" onmouseover="greyoff(this.id)" onmouseleave="greyon(this.id)" border="0" /></a> -->
-        <a href="/articles/worley-noise.html">
-        <img src="images/Example.jpg" class="opacityOn" id="ima3" onmouseover="opacityOff(this.id)" onmouseleave="opacityOn(this.id)" border="0" /></a>
-	</div>
-                </ol><!-- /#posts-list -->
-                <div style="clear:both"></div><p class="paginator">
-    Page 1 / 1
-</p>
-                </section><!-- /#content -->
-    </aside><!-- /#featured -->
+    </header>
+      <figure>
+    <img src = '/images/JuliaSet.png' class = 'center'/>
+    <figcaption class = 'center'>Figure 1. Julia set in (-2,2) domain with c = 0.285 + 0.01i.</figcaption>
+</figure>
+
+
+  </article>
+</section>
         <!-- <section id="extras" class="body">
                 <div class="social">
                         <ul>
