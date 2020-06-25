@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>A-Math-ings - Authors</title>
+        <title>Bezier Curve</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -40,14 +40,49 @@ function opacityOn(img){
                     <li><a href="/pages/suggestions.html">Suggestions</a></li>
                 </ul></nav> -->
         </header><!-- /#banner -->
+<section id="pagecontent" class="body">
+	<script>
+	Mousetrap.bind('left', prev);
+	Mousetrap.bind('right', next);
 
-<section id="content" class="body">
-    <h1>Authors on A-Math-ings</h1>
-    <ul>
-        <li><a href="/author/david.html">David</a> (5)</li>
-    </ul>
+
+	function prev(element)
+	{
+		document.getElementById('prev').click();
+	}
+	function next(element)
+	{
+		document.getElementById('next').click();
+	}
+	</script>
+  <article>
+    <header>
+	<div>
+		<div style="float:left">
+		      <h1 class="entry-title">
+		        <a href="/articles/bezier-curve.html" rel="bookmark"
+		           title="Permalink to Bezier Curve">Bezier Curve</a>
+		      </h1>
+		</div>
+		<div style="float:right"><h2>        <abbr class="published" title="2020-06-28T00:00:00+00:00">
+                do. 28 junio 2020
+        </abbr>
+</h2></div>
+	</div>
+
+	<div style="clear:both"></div>
+
+    </header>
+      <figure>
+    <img src = '/images/BezierCurve.png' class = 'center' style="width: 400px; height: 400px;"/>
+    <figcaption class = 'center'>Figure 1. Beizer Curve with 6 control points.</figcaption>
+</figure>
+
+<p align="center"><iframe style="width: 400px; height: 450px; overflow: hidden;" scrolling="no" frameborder="0" src="https://editor.p5js.org/damuopel/embed/gc8xdBd70"></iframe></p>
+
+
+  </article>
 </section>
-
         <!-- <section id="extras" class="body">
                 <div class="social">
                         <ul>
